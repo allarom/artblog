@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ArticleService } from '../../services/article.service';
 
 @Component({
   selector: 'app-homepage',
@@ -6,10 +7,16 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./homepage.component.css']
 })
 export class HomepageComponent implements OnInit {
+  articles: Array<any>;
 
-  constructor() { }
+  constructor(private articleService: ArticleService) {}
 
   ngOnInit() {
+    this.articleService.getList()
+    .then((articles)=> {
+      this.articles = articles;
+      
+    })
   }
 
 }
