@@ -1,8 +1,9 @@
 <div>
-<a><p>{{article.title}}</p></a>
-  <p>{{article.image}}</p>
+  <div><img [src]="article.image"/></div>
+  <a [routerLink]="['/articles', article._id]"><h2>{{article.title}}</h2></a>
   <p>{{article.content}}</p>
   <p>{{article.category}}</p>
+  <h4>{{ article.created_at }}</h4>
+
 </div>
 
-<!-- [routerLink]="['/articles', article._id]" -->

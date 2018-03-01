@@ -33,8 +33,9 @@ p {
   margin: 0;
 }
 
-
-
+a:first-child{
+  color: white;
+}
 /* ---- layout ---- */
 
 #site-header {
@@ -62,13 +63,34 @@ p {
   padding-top: 20px;
 }
 
-@media (min-width: 768px) {
+
+@media (min-width: 1024px) {
   .container {
-    max-width: 728px;
+    max-width: 1024px;
     margin: 0 auto;
   }
 }
 
+.body-container {
+  display: flex;
+  flex-wrap: wrap;
+  align-content: center;
+}
+
+.col {
+  flex: 1 0 20%;
+  padding: 1rem;
+  border: 1px solid black;
+
+}
+
+.col:first-child {
+  flex-grow: 2;
+
+
+}
+
+ /* --- Form ---  */
 
 form.is-processing {
 	opacity: 0.5;

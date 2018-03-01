@@ -7,10 +7,27 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class ArticleListComponent implements OnInit {
   @Input() article: any;
+  
+  constructor() {
 
-  constructor() { }
+   }
 
   ngOnInit() {
+
+      
+    }
   }
 
-}
+
+
+
+
+
+
+// var res = this.article.created_at.slice(0,10);
+// function convert() {
+//   let converted = [];
+//   var convertedDate = this.article.created_at.slice(0,10);
+//   res.push(convertedDate);
+//   console.log(typeof res);
+// }
