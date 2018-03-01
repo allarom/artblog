@@ -1,12 +1,8 @@
-<p>
-  Homepage works!
-</p>
-
 <div  class="sub-container">
 <div class="loading" *ngIf="!articles">Loading the articles</div>
 
 <div *ngIf="articles" class="body-container space-around">
-  <div *ngFor="let article of articles" class="col">
+  <div *ngFor="let article of articles" class="card">
     <app-article-list [article]="article"></app-article-list>
   </div>
 </div>

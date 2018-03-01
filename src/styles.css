@@ -3,6 +3,7 @@
 
 html {
   box-sizing: border-box;
+  background-color: rgb(235, 235, 235);
 }
 *, *:before, *:after {
   box-sizing: inherit;
@@ -14,6 +15,23 @@ body {
 }
 
 
+
+a {
+  outline: none;
+  text-decoration: none;
+  
+}
+
+a:link, a:visited {
+  color: rgb(24, 24, 24);
+}
+
+#site-header a {
+  display: inline-block;
+  color: white;
+  text-transform: uppercase;
+  padding-right: 15px;
+}
 /* ---- typography ---- */
 
 body {
@@ -21,6 +39,7 @@ body {
   font-family: Helvetica, Arial, sans-serif;
   font-size: 16px;
   line-height: 147%;
+  font-family: 'Roboto', sans-serif;
 }
 
 h1 {}
@@ -33,10 +52,17 @@ p {
   margin: 0;
 }
 
-a:first-child{
-  color: white;
-}
 /* ---- layout ---- */
+.container {
+  margin: 0 20px;
+}
+ 
+@media (min-width: 1024px) {
+  .container {
+    max-width: 85%;
+    margin: 0 auto;
+  }
+}
 
 #site-header {
   padding: 30px 0;
@@ -54,9 +80,6 @@ a:first-child{
   margin-bottom: 60px;
 }
 
-.container {
-  margin: 0 20px;
-}
 
 .section {
   margin-bottom: 20px;
@@ -66,34 +89,25 @@ a:first-child{
 img {
   width: 100%;
 }
- 
-@media (min-width: 1024px) {
-  .container {
-    max-width: 1024px;
-    margin: 0 auto;
-  }
+
+
+/* ---- components ---- */
+
+ /* --- forms ---  */ 
+
+ .form-container {
+  width: 50%;
+  margin: 0 auto;
 }
 
-.body-container {
-  display: flex;
-  flex-wrap: wrap;
-  align-content: center;
+input, textarea {
+  width: 100%;
 }
 
-.col {
-  flex: 1 0 20%;
-  padding: 1rem;
-  border: 1px solid black;
-
+.content input {
+  line-height: 5rem;
+  padding-top:0;
 }
-
-.col:first-child {
-  flex-grow: 2;
-
-
-}
-
- /* --- Form ---  */
 
 form.is-processing {
 	opacity: 0.5;
@@ -112,6 +126,14 @@ form label {
 form input {
   padding: 5px;
   font-size: 16px;
+
+}
+
+form textarea {
+  padding: 5px;
+  font-size: 16px;
+  border-color: lightgrey;
+
 }
 
 form .submit {
@@ -140,4 +162,4 @@ form .field.has-error input {
 }
 
 
-/* ---- components ---- */
+

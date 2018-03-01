@@ -1,9 +1,12 @@
 <div>
-  <div><img [src]="article.image"/></div>
-  <a [routerLink]="['/articles', article._id]"><h2>{{article.title}}</h2></a>
-  <p>{{article.content}}</p>
-  <p>{{article.category}}</p>
-  <h4>{{ article.created_at }}</h4>
-
+  <div><img [src]="article.image"/>
+ </div>
+  <div id="card-text">
+    <a [routerLink]="['/articles', article._id]"><h2>{{article.title}}</h2></a>
+    <p>{{content}}</p>
+    <p class="category">{{article.category | uppercase }}<p>
+    <div class="space"><p class="date">{{ convertedDate }} {{ time }}<p></div>
+   
+</div>
 </div>
 

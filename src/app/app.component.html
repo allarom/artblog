@@ -7,6 +7,7 @@
       <a [routerLink]="['/']">Home</a>
       <div *ngIf="!loading && !!user">
         <a [routerLink]="['/profile']">{{user.username}}</a>
+        <a [routerLink]="['/new']">Create new article</a>
         <a (click)="logout()"><br>Logout</a>
       </div>
       <div *ngIf="!loading && anon">

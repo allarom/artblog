@@ -2,3 +2,28 @@ img {
   width: 100%;
   height: auto;
 }
+
+p:last-child {
+  display: inline-block;
+}
+
+div#card-text {
+  padding: 1rem;
+}
+
+.date, .time {
+  position: absolute;
+  bottom: 10px;
+  right: 1rem;
+}
+
+.category {
+  position: absolute;
+  bottom: 10px;
+  left: 1rem;
+  font-weight: bold;
+}
+
+.space {
+  padding: 0.2rem;
+}
