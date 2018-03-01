@@ -1,0 +1,50 @@
+<p>
+  new-form works!
+</p>
+
+<form (ngSubmit)="submitForm(form)" #form="ngForm" novalidate [ngClass]="{'is-processing': processing}">
+<div class="form-container">
+    <div class="field" [ngClass]="{'has-error': feedbackEnabled && titleField.errors}">
+      <label>Title</label>
+      <input type="text" name="title" [(ngModel)]="title" #titleField="ngModel" required minlength="6" [disabled]="processing"/>
+      <div *ngIf="feedbackEnabled && titleField.errors">
+        <p *ngIf="titleField.errors.required" class="validation">title required</p>
+        <p *ngIf="titleField.errors.minlength" class="validation">title is too short</p>
+      </div>
+    </div>
+
+    <div class="field" [ngClass]="{'has-error': feedbackEnabled && imageField.errors}">
+        <label>Image</label>
+        <input type="text" name="image" [(ngModel)]="image" #imageField="ngModel" required minlength="6" [disabled]="processing"/>
+        <div *ngIf="feedbackEnabled && imageField.errors">
+          <p *ngIf="imageField.errors.required" class="validation">image required</p>
+          <p *ngIf="imageField.errors.minlength" class="validation">image is too short</p>
+        </div>
+      </div>
+
+    <div class="field" [ngClass]="{'has-error': feedbackEnabled && contentField.errors}">
+        <label>Content</label>
+        <input type="text" name="content" [(ngModel)]="content" #contentField="ngModel" required minlength="6" [disabled]="processing"/>
+        <div *ngIf="feedbackEnabled && contentField.errors">
+          <p *ngIf="contentField.errors.required" class="validation">content required</p>
+          <p *ngIf="contentField.errors.minlength" class="validation">content is too short</p>
+        </div>
+      </div>
+
+      <div class="field" [ngClass]="{'has-error': feedbackEnabled && categoryField.errors}">
+          <label>Category</label>
+          <input type="text" name="category" [(ngModel)]="category" #categoryField="ngModel" required minlength="6" [disabled]="processing"/>
+          <div *ngIf="feedbackEnabled && categoryField.errors">
+            <p *ngIf="categoryField.errors.required" class="validation">category required</p>
+            <p *ngIf="categoryField.errors.minlength" class="validation">category is too short</p>
+          </div>
+        </div>
+  
+    <div class="field submit">
+      <button type="submit" [disabled]="processing">Submit</button>
+      <div *ngIf="feedbackEnabled && form.invalid">
+        <p class="validation">there are errors in the form, please review the fields</p>
+      </div>
+    </div>
+  </div>
+  </form>
