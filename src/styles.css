@@ -63,7 +63,10 @@ a:first-child{
   padding-top: 20px;
 }
 
-
+img {
+  width: 100%;
+}
+ 
 @media (min-width: 1024px) {
   .container {
     max-width: 1024px;

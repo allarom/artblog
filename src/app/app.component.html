@@ -4,6 +4,7 @@
       <div *ngIf="loading">
         <span class="username text">loading...</span>
       </div>
+      <a [routerLink]="['/']">Home</a>
       <div *ngIf="!loading && !!user">
         <a [routerLink]="['/profile']">{{user.username}}</a>
         <a (click)="logout()"><br>Logout</a>

@@ -13,7 +13,12 @@ export class ArticleService {
   getList(): Promise<any>  {
    return this.httpClient.get(`${this.API_URL}/articles`)
         .toPromise()
+  }
 
+  getSingleArticle(entryId):Promise<any> {
+    return this.httpClient.get(`${this.API_URL}/articles/${entryId}`)
+    .toPromise()
+    // .then((res: Response) => res.json());
   }
 
 }

@@ -18,6 +18,9 @@ import { SignupPageComponent } from './pages/signup-page/signup-page.component';
 import { LoginPageComponent } from './pages/login-page/login-page.component';
 import { HomepageComponent } from './pages/homepage/homepage.component';
 import { ArticleListComponent } from './components/article-list/article-list.component';
+import { OneArticleComponent } from './pages/one-article/one-article.component';
+import { FullArticleComponent } from './components/full-article/full-article.component';
+
 
 
 // --- routes
@@ -25,8 +28,7 @@ const routes: Routes = [
   { path: '',  component: HomepageComponent, canActivate: [ InitAuthGuardService ] },
   { path: 'login',  component: LoginPageComponent, canActivate: [ RequireAnonGuardService ] },
   { path: 'signup',  component: SignupPageComponent, canActivate: [ RequireAnonGuardService ] },
-  
-  // { path: 'page',  component: ... , canActivate: [ RequireUserGuardService ] },
+  { path: 'articles/:id', component: OneArticleComponent, canActivate: [ RequireUserGuardService ]},
   { path: '**', redirectTo: '' }
 ];
  
@@ -37,7 +39,7 @@ const routes: Routes = [
     SignupPageComponent,
     LoginPageComponent, 
     HomepageComponent, 
-    ArticleListComponent
+    ArticleListComponent, OneArticleComponent, FullArticleComponent, 
   ],
   imports: [
     HttpClientModule,
