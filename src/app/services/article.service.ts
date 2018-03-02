@@ -21,4 +21,10 @@ export class ArticleService {
     // .then((res: Response) => res.json());
   }
 
+  create(data: any): Promise<any> {
+    return this.httpClient.post(`${this.API_URL}/articles`, data)
+      .toPromise()
+
+  }
+
 }

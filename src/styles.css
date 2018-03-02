@@ -64,6 +64,12 @@ p {
   }
 }
 
+@media (max-width: 920px) {
+ .date {
+   display: none;
+ }
+}
+
 #site-header {
   padding: 30px 0;
   color: white;

@@ -1,12 +1,11 @@
-<div>
-  <div><img [src]="article.image"/>
+<a [routerLink]="['/articles', article._id]"><div>
+  <div><img [src]="article?.image"/>
  </div>
   <div id="card-text">
-    <a [routerLink]="['/articles', article._id]"><h2>{{article.title}}</h2></a>
+    <h2>{{article.title}}</h2>
     <p>{{content}}</p>
     <p class="category">{{article.category | uppercase }}<p>
-    <div class="space"><p class="date">{{ convertedDate }} {{ time }}<p></div>
-   
+    <div class="space"><p class="date">{{ convertedDate }} {{ time }}<p></div> 
 </div>
-</div>
+</div></a>
 
