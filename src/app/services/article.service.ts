@@ -27,4 +27,10 @@ export class ArticleService {
 
   }
 
+  delete(entryId):Promise<any> {
+    return this.httpClient.post(`${this.API_URL}/articles/${entryId}`, entryId)
+      .toPromise()
+
+  }
+
 }

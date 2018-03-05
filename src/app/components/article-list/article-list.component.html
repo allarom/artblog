@@ -1,5 +1,14 @@
 <a [routerLink]="['/articles', article._id]"><div>
-  <div><img [src]="article?.image"/>
+    <div [ngClass]="{'is-user': user, 'is-anon': anon}">
+        <div *ngIf="!loading && !!user">
+      <p>{{username}}</p>
+      </div>
+
+      </div>
+  <div>
+  <button (click)="onArticleDelete()" class="delete">Delete</button>
+ </div>
+  <div><img [src]="article.image"/>
  </div>
   <div id="card-text">
     <h2>{{article.title}}</h2>

@@ -27,3 +27,22 @@ div#card-text {
 .space {
   padding: 0.2rem;
 }
+
+button {
+
+  border: none;
+  padding: 10px 28px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+
+.delete {
+  background-color: rgb(138, 26, 26);
+  color: white;
+  position: absolute;
+  right: 0.2rem;
+}

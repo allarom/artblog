@@ -1,5 +1,8 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { UpperCasePipe } from '@angular/common';
+import { AuthService } from '../../services/auth.service';
+import { Router } from '@angular/router';
+
 
 @Component({
   selector: 'app-article-list',
@@ -8,6 +11,8 @@ import { UpperCasePipe } from '@angular/common';
 })
 export class ArticleListComponent implements OnInit {
   @Input() article: any;
+  @Input() user: any;
+  @Output() onDelete = new EventEmitter<string>();
   content: String;
   date: String;
   convertedDate: String;
@@ -15,12 +20,20 @@ export class ArticleListComponent implements OnInit {
   month: String;
   year: String;
   time: String;
+  loading = true;
+  anon: boolean;
+
+  username: String;
+  userLoggedIn: boolean;
   
-  constructor() {
+  constructor(private authService: AuthService, private router: Router) {
 
    }
 
   ngOnInit() {
+
+
+    
     this.content = this.article.content.split(" ").slice(0, 30).join(" ") + "...";
     this.date = this.article.created_at.slice(0,10).replace(/-/g," ");
     this.day = this.date.substr(8, 2);
@@ -28,21 +41,27 @@ export class ArticleListComponent implements OnInit {
     this.year = this.date.substr(0, 4);
     this.convertedDate = this.day + " " + this.month + " " + this.year;
     this.time = this.article.created_at.substr(11,5);
+    console.log(this.user);
+
+
     
-      
+    // this.authService.userChange$.subscribe((user) => {
+    //   this.loading = false;
+    //   if(this.user){
+    //     this.username = this.user.username;
+    //     this.userLoggedIn = true;
+    //   }
+    //   this.user = user;
+    //   console.log(user.username);
+    //   this.anon = !user;
+    // });
+    }
+
+    onArticleDelete () {
+      this.onDelete.emit(this.article.id);
     }
   }
 
 
 
 
-
-
-
-// var res = this.article.created_at.slice(0,10);
-// function convert() {
-//   let converted = [];
-//   var convertedDate = this.article.created_at.slice(0,10);
-//   res.push(convertedDate);
-//   console.log(typeof res);
-// }

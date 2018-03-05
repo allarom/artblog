@@ -1,9 +1,9 @@
-<div  class="sub-container">
+<div>
 <div class="loading" *ngIf="!articles">Loading the articles</div>
 
 <div *ngIf="articles" class="body-container space-around">
   <div *ngFor="let article of articles" class="card">
-    <app-article-list [article]="article"></app-article-list>
+    <app-article-list [article]="article" (onDelete)="removeArticle($event)"></app-article-list>
   </div>
 </div>
 </div>

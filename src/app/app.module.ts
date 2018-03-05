@@ -28,6 +28,7 @@ import { NewFormComponent } from './components/new-form/new-form.component';
 // --- routes
 const routes: Routes = [
   { path: '',  component: HomepageComponent, canActivate: [ InitAuthGuardService ] },
+  { path: 'articles/profile',  component: HomepageComponent, canActivate: [ RequireUserGuardService ] },
   { path: 'login',  component: LoginPageComponent, canActivate: [ RequireAnonGuardService ] },
   { path: 'signup',  component: SignupPageComponent, canActivate: [ RequireAnonGuardService ] },
   { path: 'articles/:id', component: OneArticleComponent, canActivate: [ RequireUserGuardService ]},
