@@ -47,5 +47,9 @@ export class HomepageComponent implements OnInit {
 
   }
 
+  handleDeleteArticle(event) {
+    console.log('User want to delete articelissimo' + event);
+  }
+
 
 }

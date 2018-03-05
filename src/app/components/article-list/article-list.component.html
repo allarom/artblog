@@ -1,7 +1,6 @@
-<a [routerLink]="['/articles', article._id]"><div>
+<div>
     <div [ngClass]="{'is-user': user, 'is-anon': anon}">
         <div *ngIf="!loading && !!user">
-      <p>{{username}}</p>
       </div>
 
       </div>
@@ -11,10 +10,10 @@
   <div><img [src]="article.image"/>
  </div>
   <div id="card-text">
-    <h2>{{article.title}}</h2>
+    <a [routerLink]="['/articles', article._id]"> <h2>{{article.title}}</h2></a>
     <p>{{content}}</p>
     <p class="category">{{article.category | uppercase }}<p>
     <div class="space"><p class="date">{{ convertedDate }} {{ time }}<p></div> 
 </div>
-</div></a>
+</div>
 

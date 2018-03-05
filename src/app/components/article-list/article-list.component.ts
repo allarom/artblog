@@ -23,17 +23,12 @@ export class ArticleListComponent implements OnInit {
   loading = true;
   anon: boolean;
 
-  username: String;
-  userLoggedIn: boolean;
   
   constructor(private authService: AuthService, private router: Router) {
 
    }
 
   ngOnInit() {
-
-
-    
     this.content = this.article.content.split(" ").slice(0, 30).join(" ") + "...";
     this.date = this.article.created_at.slice(0,10).replace(/-/g," ");
     this.day = this.date.substr(8, 2);
@@ -41,10 +36,7 @@ export class ArticleListComponent implements OnInit {
     this.year = this.date.substr(0, 4);
     this.convertedDate = this.day + " " + this.month + " " + this.year;
     this.time = this.article.created_at.substr(11,5);
-    console.log(this.user);
 
-
-    
     // this.authService.userChange$.subscribe((user) => {
     //   this.loading = false;
     //   if(this.user){
@@ -58,7 +50,8 @@ export class ArticleListComponent implements OnInit {
     }
 
     onArticleDelete () {
-      this.onDelete.emit(this.article.id);
+      console.log('User clicked on' + this.article._id);
+      this.onDelete.emit(this.article._id);
     }
   }
 
