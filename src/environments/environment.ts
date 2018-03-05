@@ -5,6 +5,7 @@
 
 export const environment = {
   production: false,
-  apiUrl: 'http://localhost:3010'
-  // apiUrl: 'https://artblog-server.herokuapp.com'
+  // apiUrl: 'http://localhost:3010'
+
+  apiUrl: 'https://artblog-server.herokuapp.com'
 };
