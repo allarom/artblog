@@ -1,9 +1,8 @@
 <div>
     <div [ngClass]="{'is-user': user, 'is-anon': anon}">
         <div *ngIf="!loading && !!user">
-      </div>
-
-      </div>
+        </div>
+    </div>
   <div>
   <button (click)="onArticleDelete()" class="delete">Delete</button>
  </div>
@@ -14,6 +13,6 @@
     <p>{{content}}</p>
     <p class="category">{{article.category | uppercase }}<p>
     <div class="space"><p class="date">{{ convertedDate }} {{ time }}<p></div> 
-</div>
+ </div>
 </div>
 

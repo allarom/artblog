@@ -26,8 +26,8 @@ export class ArticleService {
 
   }
 
-  delete(entryId):Promise<any> {
-    return this.httpClient.post(`${apiUrl}/articles/${entryId}`, entryId)
+  delete(entryId: any):Promise<any> {
+    return this.httpClient.delete(`${apiUrl}/articles/${entryId}`, entryId)
       .toPromise()
 
   }
