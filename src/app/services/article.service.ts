@@ -7,8 +7,6 @@ const apiUrl = environment.apiUrl;
 @Injectable()
 export class ArticleService {
 
-  API_URL = 'http://localhost:3010';
-
   constructor(private httpClient: HttpClient) { }
 
   getList(): Promise<any>  {
