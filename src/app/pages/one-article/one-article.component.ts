@@ -8,6 +8,7 @@ import { ArticleService } from '../../services/article.service';
   styleUrls: ['./one-article.component.css']
 })
 export class OneArticleComponent implements OnInit {
+  articles: any;
   article: Object;
   entryId: String;
 
