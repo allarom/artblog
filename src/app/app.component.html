@@ -6,9 +6,8 @@
       </div>
       <a [routerLink]="['/']" class="Logo">Home</a>
    
-          
       <a *ngIf="!loading && !!user" (click)="logout()" class="float-right">Logout</a>
-      <a *ngIf="!loading && !!user" [routerLink]="['/new']" class="float-right">how about to create new article?</a>
+      <a *ngIf="!loading && !!user" [routerLink]="['/new']" class="float-right">Create new article?</a>
       <a *ngIf="!loading && !!user" [routerLink]="['/profile']" class="float-right">Hello {{user.username}}</a>
       
       <div *ngIf="!loading && anon" class="float-right">

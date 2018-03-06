@@ -50,7 +50,6 @@ export class ArticleListComponent implements OnInit {
     }
 
     onArticleDelete () {
-      console.log('User clicked on' + this.article._id);
       this.onDelete.emit(this.article._id);
     }
   }

@@ -3,13 +3,14 @@
         <div *ngIf="!loading && !!user">
         </div>
     </div>
-  <div>
+  <div *ngIf="user">
   <button (click)="onArticleDelete()" class="delete">Delete</button>
  </div>
   <div><img [src]="article.image"/>
  </div>
   <div id="card-text">
     <h2>{{article.title}}</h2>
+    <p>{{user.username}}</p>
     <p>{{content}}</p>
     <p class="category">{{article.category | uppercase }}<p>
     <div class="space"><p class="date">{{ convertedDate }} {{ time }}<p></div> 

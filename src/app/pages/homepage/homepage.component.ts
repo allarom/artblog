@@ -21,37 +21,16 @@ export class HomepageComponent implements OnInit {
   constructor(private articleService: ArticleService, private authService: AuthService, private router: Router) {}
 
   ngOnInit() {
+    this.user = this.authService.getUser();
+    console.log(this.user)
+
 
     this.articleService.getList()
     .then((articles)=> {
       this.articles = articles;
       
     })
-
-
-      this.authService.userChange$.subscribe((user) => {
-      this.loading = false;
-      if(this.user){
-        this.username = this.user.username;
-        console.log(this.username);
-
-      }
-      this.user = user;
-      this.anon = !user;
-    });
-
-    // this.articleService.delete(id) {
-    //   this.articles = this.articles.filter(
-    //     (article) => article.id !== id
-    //   );
-    // }
-
   }
-
-
-  // handleDeleteArticle(event) {
-  //   console.log('User want to delete articelissimo' + event);
-  // }
 
   handleDeleteArticle(event) {
 
