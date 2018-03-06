@@ -16,14 +16,14 @@ export class HomepageComponent implements OnInit {
   username: String;
   loading = true;
   error: any;
+  autor: String;
 
 
   constructor(private articleService: ArticleService, private authService: AuthService, private router: Router) {}
 
   ngOnInit() {
     this.user = this.authService.getUser();
-    console.log(this.user)
-
+    
 
     this.articleService.getList()
     .then((articles)=> {
@@ -33,7 +33,7 @@ export class HomepageComponent implements OnInit {
   }
 
   handleDeleteArticle(event) {
-
+     
       this.articleService.delete(event)
         .then()
         this.router.navigate(['/articles/profile'])

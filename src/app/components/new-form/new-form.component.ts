@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { ArticleService } from '../../services/article.service';
+import { AuthService } from '../../services/auth.service';
 
 @Component({
   selector: 'app-new-form',
@@ -15,10 +16,13 @@ export class NewFormComponent implements OnInit {
   image: String;
   content: String;
   category: String;
+  user: String
 
-  constructor(private router: Router, private articleService: ArticleService ) { }
+  constructor(private router: Router, private articleService: ArticleService, private authService: AuthService ) { }
 
   ngOnInit() {
+    this.user = this.authService.getUser().username;
+
   }
   submitForm(form) {
     this.error = '';
@@ -27,7 +31,8 @@ export class NewFormComponent implements OnInit {
       title: this.title,
       image: this.image,
       content: this.content,
-      category: this.category
+      category: this.category,
+      autor: this.user
 
     }
     if (form.valid) {

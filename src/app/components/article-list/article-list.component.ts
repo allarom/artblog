@@ -11,7 +11,6 @@ import { Router } from '@angular/router';
 })
 export class ArticleListComponent implements OnInit {
   @Input() article: any;
-  @Input() user: any;
   @Output() onDelete = new EventEmitter<string>();
   content: String;
   date: String;
@@ -22,13 +21,15 @@ export class ArticleListComponent implements OnInit {
   time: String;
   loading = true;
   anon: boolean;
+  autor: String;
+  currentUser: String;
 
-  
-  constructor(private authService: AuthService, private router: Router) {
-
-   }
+  constructor(private authService: AuthService, private router: Router) {}
 
   ngOnInit() {
+    this.currentUser = this.authService.getUser();
+    this.autor = this.article.autor;
+
     this.content = this.article.content.split(" ").slice(0, 30).join(" ") + "...";
     this.date = this.article.created_at.slice(0,10).replace(/-/g," ");
     this.day = this.date.substr(8, 2);
@@ -37,16 +38,6 @@ export class ArticleListComponent implements OnInit {
     this.convertedDate = this.day + " " + this.month + " " + this.year;
     this.time = this.article.created_at.substr(11,5);
 
-    // this.authService.userChange$.subscribe((user) => {
-    //   this.loading = false;
-    //   if(this.user){
-    //     this.username = this.user.username;
-    //     this.userLoggedIn = true;
-    //   }
-    //   this.user = user;
-    //   console.log(user.username);
-    //   this.anon = !user;
-    // });
     }
 
     onArticleDelete () {

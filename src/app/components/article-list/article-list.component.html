@@ -3,15 +3,14 @@
         <div *ngIf="!loading && !!user">
         </div>
     </div>
-  <div *ngIf="user">
+  <div *ngIf="currentUser?.username === autor">
   <button (click)="onArticleDelete()" class="delete">Delete</button>
  </div>
   <div><img [src]="article.image"/>
  </div>
   <div id="card-text">
     <h2>{{article.title}}</h2>
-    <p>{{user.username}}</p>
-    <p>{{content}}</p>
+    <p>{{content}}<span> Written by {{article.autor}}</span></p>
     <p class="category">{{article.category | uppercase }}<p>
     <div class="space"><p class="date">{{ convertedDate }} {{ time }}<p></div> 
  </div>

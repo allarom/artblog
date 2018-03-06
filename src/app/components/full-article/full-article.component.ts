@@ -8,6 +8,12 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class FullArticleComponent implements OnInit {
   @Input() article: any;
+  @Input() date: String;
+  convertedDate: String;
+  day: String;
+  month: String;
+  year: String;
+  time: String;
 
   constructor() { }
 

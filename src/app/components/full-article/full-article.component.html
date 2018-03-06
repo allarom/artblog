@@ -1,8 +1,10 @@
-<div *ngIf="article">
-    <div><img [src]="article.image"/></div>
-    <a><h2>{{ article.title }}</h2></a>
-    <p>{{ article.content }}</p>
-    <p>{{ article.category  }}</p>
-    <h4>{{ article.created_at }}</h4>
+<div *ngIf="article" class="single-article-container">
+  <div><img [src]="article.image"/></div>
+    <div class="sa-text-elements">
+        <a><h2>{{ article.title }}</h2></a>
+        <p>{{ article.content }}</p>
+        <h4>{{ article.category  }}</h4>
+        <h4>{{ this.date }}</h4>
+   </div>
  </div>
   

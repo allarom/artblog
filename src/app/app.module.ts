@@ -31,7 +31,7 @@ const routes: Routes = [
   { path: 'articles/profile',  component: HomepageComponent, canActivate: [ RequireUserGuardService ] },
   { path: 'login',  component: LoginPageComponent, canActivate: [ RequireAnonGuardService ] },
   { path: 'signup',  component: SignupPageComponent, canActivate: [ RequireAnonGuardService ] },
-  { path: 'articles/:id', component: OneArticleComponent, canActivate: [ RequireUserGuardService ]},
+  { path: 'articles/:id', component: OneArticleComponent, canActivate: [ InitAuthGuardService ]},
   { path: 'new', component: NewArticleComponent, canActivate: [ RequireUserGuardService ]},
   { path: '**', redirectTo: '' }
 ];
