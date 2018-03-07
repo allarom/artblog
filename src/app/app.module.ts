@@ -27,13 +27,14 @@ import { NewFormComponent } from './components/new-form/new-form.component';
 
 // --- routes
 const routes: Routes = [
-  { path: '',  redirectTo: 'articles/profile', pathMatch: 'full' },
-  { path: 'articles/profile',  component: HomepageComponent, canActivate: [ RequireUserGuardService ] },
+  { path: '',  component: HomepageComponent, canActivate: [ InitAuthGuardService ] },
+  { path: 'articles/profile', component: HomepageComponent, canActivate: [ RequireUserGuardService ] },
   { path: 'login',  component: LoginPageComponent, canActivate: [ RequireAnonGuardService ] },
   { path: 'signup',  component: SignupPageComponent, canActivate: [ RequireAnonGuardService ] },
   { path: 'articles/:id', component: OneArticleComponent, canActivate: [ InitAuthGuardService ]},
   { path: 'new', component: NewArticleComponent, canActivate: [ RequireUserGuardService ]},
   { path: '**', redirectTo: '' }
+  // { path: '',  redirectTo: 'articles/profile', pathMatch: 'full' },
 ];
  
 
