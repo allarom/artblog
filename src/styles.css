@@ -59,6 +59,7 @@ p {
   margin: 0 20px;
   max-width: 85%;
   margin: 0 auto;
+
 }
 /*  
 @media (min-width: 1024px) {
@@ -67,6 +68,10 @@ p {
     margin: 0 auto;
   }
 } */
+
+
+
+
 
 @media (max-width: 1300px) {
  .date {
@@ -92,6 +97,7 @@ p {
   background:url(
   data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAYAAACp8Z5+AAAAH0lEQVQYV2NkQAX/GZH4/xkYGBhhAmAOSBJEwDkgAQCCrgQEjpMcPgAAAABJRU5ErkJggg==
    ) repeat;
+   overflow: hidden;
 }
 
 #site-main {
@@ -121,6 +127,17 @@ img {
   margin: 0 auto;
   margin-top: 2rem;
   background-color: white;
+
+}
+
+@media (min-device-width: 0px) and (max-device-width: 550px) {
+  .form-container {
+    width: 100%;
+    min-height: 110vh;
+  }
+  input {
+    border: 1px solid darkgrey;
+  }
 
 }
 
@@ -185,6 +202,8 @@ form .validation {
 form .field.has-error input {
 	border: 1px solid  red;
 }
+
+
 
 
 
