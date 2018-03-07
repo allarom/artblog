@@ -1,7 +1,7 @@
 
 <form (ngSubmit)="submitForm(form)" #form="ngForm" novalidate [ngClass]="{'is-processing': processing}">
   <div class="field" [ngClass]="{'has-error': feedbackEnabled && titleField.errors}">
-    <label>Title</label>
+    <label><b>Title</b></label>
     <input type="text" name="title" [(ngModel)]="title" #titleField="ngModel" required minlength="6" [disabled]="processing"/>
     <div *ngIf="feedbackEnabled && titleField.errors">
       <p *ngIf="titleField.errors.required" class="validation">title required</p>
@@ -10,7 +10,7 @@
   </div>
 
   <div class="field" [ngClass]="{'has-error': feedbackEnabled && imageField.errors}">
-      <label>Image</label>
+      <label><b>Image</b></label>
       <input type="text" name="image" [(ngModel)]="image" #imageField="ngModel" required minlength="6" [disabled]="processing"/>
       <div *ngIf="feedbackEnabled && imageField.errors">
         <p *ngIf="imageField.errors.required" class="validation">image required</p>
@@ -19,7 +19,7 @@
     </div>
 
   <div class="field content" [ngClass]="{'has-error': feedbackEnabled && contentField.errors}">
-      <label>Content</label>
+      <label><b>Content</b></label>
       <textarea type="text" name="content" [(ngModel)]="content" #contentField="ngModel" required minlength="6" [disabled]="processing" cols="30" rows="10"></textarea>
       <div *ngIf="feedbackEnabled && contentField.errors">
         <p *ngIf="contentField.errors.required" class="validation">content required</p>
@@ -28,7 +28,7 @@
     </div>
 
     <div class="field" [ngClass]="{'has-error': feedbackEnabled && categoryField.errors}">
-        <label>Category</label>
+        <label><b>Category</b></label>
         <input type="text" name="category" [(ngModel)]="category" #categoryField="ngModel" required minlength="6" [disabled]="processing"/>
         <div *ngIf="feedbackEnabled && categoryField.errors">
           <p *ngIf="categoryField.errors.required" class="validation">category required</p>

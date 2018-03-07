@@ -14,6 +14,7 @@ body {
   height: 0;
 }
 
+/* ---- typography and links ---- */
 a {
   outline: none;
   text-decoration: none;
@@ -30,7 +31,6 @@ a:link, a:visited {
   text-transform: uppercase;
 
 }
-/* ---- typography ---- */
 
 body {
   color: #111;
@@ -57,16 +57,18 @@ p {
 /* ---- layout ---- */
 .container {
   margin: 0 20px;
+  max-width: 85%;
+  margin: 0 auto;
 }
- 
+/*  
 @media (min-width: 1024px) {
   .container {
     max-width: 85%;
     margin: 0 auto;
   }
-}
+} */
 
-@media (max-width: 920px) {
+@media (max-width: 1300px) {
  .date {
    display: none;
  }
@@ -81,16 +83,14 @@ p {
 #site-header {
   padding: 10px 0;
   background:url(
-
-data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAYAAACp8Z5+AAAAH0lEQVQYV2NkQAX/GZH4/xkYGBhhAmAOSBJEwDkgAQCCrgQEjpMcPgAAAABJRU5ErkJggg==
+  data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAYAAACp8Z5+AAAAH0lEQVQYV2NkQAX/GZH4/xkYGBhhAmAOSBJEwDkgAQCCrgQEjpMcPgAAAABJRU5ErkJggg==
    ) repeat;
 }
 
 #site-footer {
   padding: 10px 0;
   background:url(
-
-data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAYAAACp8Z5+AAAAH0lEQVQYV2NkQAX/GZH4/xkYGBhhAmAOSBJEwDkgAQCCrgQEjpMcPgAAAABJRU5ErkJggg==
+  data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAYAAACp8Z5+AAAAH0lEQVQYV2NkQAX/GZH4/xkYGBhhAmAOSBJEwDkgAQCCrgQEjpMcPgAAAABJRU5ErkJggg==
    ) repeat;
 }
 

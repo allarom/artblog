@@ -17,6 +17,7 @@ export class OneArticleComponent implements OnInit {
   year: String;
   time: String;
   date1: String;
+  convertedDate: String;
 
 
   constructor( private articleService: ArticleService, private route: ActivatedRoute) {}
@@ -29,11 +30,7 @@ export class OneArticleComponent implements OnInit {
     .then((result) => {
      this.article = result;
      // --- formatting date for full-article component
-     this.date1 = result.created_at.slice(0,10).replace(/-/g," ");
-     this.day = this.date1.substr(8, 2);
-     this.month = this.date1.substr(5, 2);
-     this.year = this.date1.substr(0, 4);
-     this.date = this.day + " " + this.month + " " + this.year + " " + result.created_at.substr(11,5);
+     this.date = result.created_at.toLocaleString();
     })
   }
 

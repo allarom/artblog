@@ -3,8 +3,8 @@
     <div class="article-image"><img [src]="article.image"/></div>
     <div class="sa-text-elements">
         <h2 class="title-detail-page">{{ article.title }}</h2>
-        <p>Written by {{article.autor}}</p>
-        <h4>{{ this.date }}</h4>
+        <p class="autor-article">Written by {{article.autor}}</p>
+        <h4 class="date-article">{{ this.date | date:'medium' }}</h4>
       </div>
     </div>
 

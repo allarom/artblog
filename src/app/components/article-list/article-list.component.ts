@@ -13,12 +13,7 @@ export class ArticleListComponent implements OnInit {
   @Input() article: any;
   @Output() onDelete = new EventEmitter<string>();
   content: String;
-  date: String;
   convertedDate: String;
-  day: String;
-  month: String;
-  year: String;
-  time: String;
   loading = true;
   anon: boolean;
   autor: String;
@@ -29,18 +24,13 @@ export class ArticleListComponent implements OnInit {
   constructor(private authService: AuthService, private router: Router) {}
 
   ngOnInit() {
+    this.convertedDate = this.article.created_at.toLocaleString();
     this.currentUser = this.authService.getUser();
     this.autor = this.article.autor;
-    this.username;
-
+    this.username; 
+    
+    // --- slicing the card content for first 30 words
     this.content = this.article.content.split(" ").slice(0, 30).join(" ") + "...";
-    this.date = this.article.created_at.slice(0,10).replace(/-/g," ");
-    this.day = this.date.substr(8, 2);
-    this.month = this.date.substr(5, 2);
-    this.year = this.date.substr(0, 4);
-    this.convertedDate = this.day + " " + this.month + " " + this.year;
-    this.time = this.article.created_at.substr(11,5);
-
     }
 
     onArticleDelete () {

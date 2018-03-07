@@ -1,97 +1,106 @@
 
 @media (min-device-width: 769px) and (max-device-width: 2000px) {
-.single-article-container {
-  background-color: white;
-  margin-top: 10px;
-  display: flex;
-}
-
-.single-article-container img {
-  flex: 1 0 40%;
-  width: 100%;
-}
-
-.sa-text-elements {
-  flex: 1 0 40%;
-  background-color: white;
-}
-
-.title-detail-page {
-  font-size: 3.7rem;
-  line-height: 3.9rem; 
-}
-
-.sa-text-elements {
-  padding: 0.9rem;
-}
-
-.artcile-text { 
-  background-color: white;
-  padding: 0.6rem;
-  font-size: 1.5rem;
-  line-height: 2rem;
-  hyphens: auto; 
-  text-align: justify;
-  word-break: break-word;
-  padding-left: 12rem;
-  padding-right: 2rem;
-  padding-top: 4rem;
- }
-
- .artcile-text p {
-  padding-bottom: 1rem;
-
- }
-
- .artcile-text p::first-letter {
-  font-size: 3rem;
-  float: left;
-  font-family: Georgia;
-  font-size: 75px;
-  line-height: 60px;
-  padding-top: 4px;
-  padding-right: 8px;
-  padding-left: 3px;
-
- }
-}
-
-@media (min-device-width: 0px) and (max-device-width: 768px) {
   .single-article-container {
     background-color: white;
+    margin-top: 10px;
     display: flex;
-    flex-wrap: wrap;
-    width: 100%;
-
   }
+  
   .single-article-container img {
+    flex: 1 0 40%;
     width: 100%;
   }
-
-  .title-detail-page {
-    font-size: 2.5rem;
-    line-height: 2.6rem; 
+  
+  .date-article, .autor-article {
+    font-size: 1.6rem;
   }
-
+  
+  
+  .sa-text-elements {
+    flex: 1 0 40%;
+    background-color: white;
+  }
+  
+  .title-detail-page {
+    font-size: 3.7rem;
+    line-height: 3.9rem; 
+  }
+  
+  .sa-text-elements {
+    padding: 0.9rem;
+  }
+  
   .artcile-text { 
-    flex-basis: 100%;
     background-color: white;
     padding: 0.6rem;
+    font-size: 1.5rem;
+    line-height: 2rem;
+    hyphens: auto; 
+    text-align: justify;
+    word-break: break-word;
+    padding-left: 12rem;
+    padding-right: 2rem;
+    padding-top: 4rem;
    }
-
+  
    .artcile-text p {
     padding-bottom: 1rem;
-    font-size: 1.5rem;
-    line-height: 2.2rem;
    }
-
-   .sa-text-elements {
-    padding: 0.6rem;
-  }
-
   
- }
-
-
-
-
+   .artcile-text p::first-letter {
+    font-size: 3rem;
+    float: left;
+    font-family: Georgia;
+    font-size: 75px;
+    line-height: 60px;
+    padding-top: 4px;
+    padding-right: 8px;
+    padding-left: 3px;
+  
+   }
+  }
+  
+  @media (min-device-width: 0px) and (max-device-width: 768px) {
+    .single-article-container {
+      background-color: white;
+      display: flex;
+      flex-wrap: wrap;
+      width: 100%;
+  
+    }
+    .single-article-container img {
+      width: 100%;
+    }
+  
+    .title-detail-page {
+      font-size: 2.5rem;
+      line-height: 2.6rem; 
+    }
+  
+    .date-article, .autor-article{
+      font-size: 1.5rem;
+    }
+  
+    .artcile-text { 
+      flex-basis: 100%;
+      background-color: white;
+      padding: 0.6rem;
+     }
+  
+     .artcile-text p {
+      padding-bottom: 1rem;
+      font-size: 1.5rem;
+      line-height: 2.2rem;
+     }
+  
+     .sa-text-elements {
+      padding: 0.6rem;
+    }
+  
+    
+   }
+  
+  
+  
+  
+  
