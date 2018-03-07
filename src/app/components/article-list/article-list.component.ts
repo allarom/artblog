@@ -23,12 +23,15 @@ export class ArticleListComponent implements OnInit {
   anon: boolean;
   autor: String;
   currentUser: String;
+  user: any;
+  username: String;
 
   constructor(private authService: AuthService, private router: Router) {}
 
   ngOnInit() {
     this.currentUser = this.authService.getUser();
     this.autor = this.article.autor;
+    this.username;
 
     this.content = this.article.content.split(" ").slice(0, 30).join(" ") + "...";
     this.date = this.article.created_at.slice(0,10).replace(/-/g," ");

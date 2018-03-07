@@ -4,15 +4,19 @@
       <div *ngIf="loading">
         <span class="username text">Loading articles...</span>
       </div>
-      <a [routerLink]="['/']" class="Logo">Home</a>
-   
-      <a *ngIf="!loading && !!user" (click)="logout()" class="float-right">Logout</a>
-      <a *ngIf="!loading && !!user" [routerLink]="['/new']" class="float-right">Create new article?</a>
-      <p *ngIf="!loading && !!user" [routerLink]="['/profile']" class="float-right hello-user">Hello {{user.username}}</p>
-      
-      <div *ngIf="!loading && anon" class="float-right">
-        <a [routerLink]="['/login']">Login</a>
-        <a [routerLink]="['/signup']">Signup</a>
+      <a [routerLink]="['/']"><img src="assets/images/Logo.png" alt="Logo" class="logo"></a>
+      <div class="navigation">
+        <div>
+        </div>
+        <div>
+          <a *ngIf="!loading && !!user" [routerLink]="['/profile']">Hello {{user.username}}</a>
+          <a *ngIf="!loading && !!user" [routerLink]="['/new']">Create new article?</a>
+          <a *ngIf="!loading && !!user" (click)="logout()">Logout</a>
+          <div *ngIf="!loading && anon">
+            <a [routerLink]="['/login']">Login</a>
+            <a [routerLink]="['/signup']">Signup</a>
+          </div>
+        </div>
       </div>
     </div>
  </div>

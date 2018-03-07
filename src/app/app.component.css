@@ -1,18 +1,17 @@
-.login-signup  {
-  float: right;
+.navigation {
+  display: flex;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+}
+
+.navigation a {
+  padding: 0.3rem 0.5rem;
+  margin: 2px;
+  background-color: black;
+  letter-spacing: 1px;
 }
 
 .logo {
- float: left;
-}
-
-.float-right {
-  float: right;
-}
-
-.hello-user {
-  display: inline-block;
-  color: white;
-  text-transform: uppercase;
-  padding-right: 15px;
+  width: 80px;
+  height: auto;
 }

@@ -14,24 +14,21 @@ body {
   height: 0;
 }
 
-
-
 a {
   outline: none;
   text-decoration: none;
   cursor: pointer;
-  
 }
 
 a:link, a:visited {
-  color: rgb(24, 24, 24);
+  color: rgb(71, 71, 71);
 }
 
 #site-header a {
   display: inline-block;
   color: white;
   text-transform: uppercase;
-  padding-right: 15px;
+
 }
 /* ---- typography ---- */
 
@@ -81,10 +78,20 @@ p {
   background: #111;
 }
 
+#site-header {
+  padding: 10px 0;
+  background:url(
+
+data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAYAAACp8Z5+AAAAH0lEQVQYV2NkQAX/GZH4/xkYGBhhAmAOSBJEwDkgAQCCrgQEjpMcPgAAAABJRU5ErkJggg==
+   ) repeat;
+}
+
 #site-footer {
-  color: white;
-  padding: 60px 0;
-  background: #111;
+  padding: 10px 0;
+  background:url(
+
+data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAYAAACp8Z5+AAAAH0lEQVQYV2NkQAX/GZH4/xkYGBhhAmAOSBJEwDkgAQCCrgQEjpMcPgAAAABJRU5ErkJggg==
+   ) repeat;
 }
 
 #site-main {
@@ -110,7 +117,11 @@ img {
   width: 50%;
   height: 80vh;
   padding-top: 20px;
+  padding: 2rem;
   margin: 0 auto;
+  margin-top: 2rem;
+  background-color: white;
+
 }
 
 input, textarea {
@@ -139,14 +150,12 @@ form label {
 form input {
   padding: 5px;
   font-size: 16px;
-
 }
 
 form textarea {
   padding: 5px;
   font-size: 16px;
   border-color: lightgrey;
-
 }
 
 form .submit {
@@ -157,7 +166,10 @@ form .submit button {
   padding: 5px 20px;
   text-align: center;
   font-size: 16px;
-  background-color: cyan;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: white;
+  background-color: black;
   cursor: pointer;
 }
 

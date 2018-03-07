@@ -1,7 +1,7 @@
 <form (ngSubmit)="submitForm(form)" #form="ngForm" novalidate [ngClass]="{'is-processing': processing}">
   <div class="form-container">
     <div class="field" [ngClass]="{'has-error': feedbackEnabled && usernameField.errors}">
-      <label>Username</label>
+      <label><b>Username</b></label>
       <input type="text" name="username" [(ngModel)]="username" #usernameField="ngModel" required minlength="6" [disabled]="processing"/>
       <div *ngIf="feedbackEnabled && usernameField.errors">
         <p *ngIf="usernameField.errors.required" class="validation">Username required</p>
@@ -9,7 +9,7 @@
        </div>
     </div>
     <div class="field" [ngClass]="{'has-error': feedbackEnabled && passwordField.errors}">
-        <label>Password</label>
+        <label><b>Password</b></label>
         <input type="password" name="password" [(ngModel)]="password" #passwordField="ngModel" required minlength="6" [disabled]="processing"/>
         <div *ngIf="feedbackEnabled && passwordField.errors"> 
           <p *ngIf="passwordField.errors.required" class="validation">Password required</p>

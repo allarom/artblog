@@ -1,10 +1,16 @@
-<div *ngIf="article" class="single-article-container">
-  <div><img [src]="article.image"/></div>
+<div *ngIf="article">
+  <div class="single-article-container">
+    <div class="article-image"><img [src]="article.image"/></div>
     <div class="sa-text-elements">
-        <a><h2>{{ article.title }}</h2></a>
-        <p>{{ article.content }}</p>
-        <h4>{{ article.category  }}</h4>
+        <h2 class="title-detail-page">{{ article.title }}</h2>
+        <p>Written by {{article.autor}}</p>
         <h4>{{ this.date }}</h4>
-   </div>
+      </div>
+    </div>
+
+    <div class="artcile-text">
+      <p>{{ article.content }}</p>
+      <b>{{ article.category  }}</b>
+    </div>  
  </div>
   

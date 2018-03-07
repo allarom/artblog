@@ -36,7 +36,7 @@ export class HomepageComponent implements OnInit {
      
       this.articleService.delete(event)
         .then()
-        this.router.navigate(['/articles/profile'])
+        this.router.navigate(['/'])
         .catch((err) => {
           this.error = err.error.error; 
 
