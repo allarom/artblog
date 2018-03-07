@@ -22,7 +22,7 @@ export class ArticleListComponent implements OnInit {
   loading = true;
   anon: boolean;
   autor: String;
-  currentUser: String;
+  currentUser: any;
   user: any;
   username: String;
 

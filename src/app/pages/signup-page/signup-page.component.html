@@ -1,5 +1,5 @@
-<form (ngSubmit)="submitForm(form)" #form="ngForm" novalidate [ngClass]="{'is-processing': processing}">
-  <div class="form-container">
+<div class="form-container">
+  <form (ngSubmit)="submitForm(form)" #form="ngForm" novalidate [ngClass]="{'is-processing': processing}">
     <div class="field" [ngClass]="{'has-error': feedbackEnabled && usernameField.errors}">
       <label><b>Username</b></label>
       <input type="text" name="username" [(ngModel)]="username" #usernameField="ngModel" required minlength="6" [disabled]="processing"/>
@@ -24,6 +24,5 @@
         <p class="validation">There are errors in the form, please review the fields</p>
       </div>
     </div>
-  </div>
   </form>
-
+</div>

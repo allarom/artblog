@@ -35,11 +35,11 @@ export class HomepageComponent implements OnInit {
   handleDeleteArticle(event) {
      
       this.articleService.delete(event)
-        .then()
-        this.router.navigate(['/'])
+        .then(() => {
+          this.router.navigate(['/']);
+        })
         .catch((err) => {
           this.error = err.error.error; 
-
         });
     
   }

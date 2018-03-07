@@ -12,7 +12,7 @@
     <h2>{{article.title}}</h2>
     <p>{{content}}<span> Written by {{article.autor}}</span></p>
     <p class="category">{{article.category | uppercase }}<p>
-    <div class="space"><p class="date">{{ convertedDate }} {{ time }}<p></div> 
+    <div class="space"><p class="date">{{ this.article.created_at | date:'y m d' }} {{ time }}<p></div> 
  </div>
 </div></a>
 
